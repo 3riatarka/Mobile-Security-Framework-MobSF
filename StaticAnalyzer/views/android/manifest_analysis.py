@@ -110,6 +110,7 @@ def manifest_data(mfxml):
             package = node.getAttribute('package')
             androidversioncode = node.getAttribute('android:versionCode')
             androidversionname = node.getAttribute('android:versionName')
+            shareduserid = node.getAttribute('android:sharedUserId')
         for activity in activities:
             act_2 = activity.getAttribute('android:name')
             act.append(act_2)
@@ -305,6 +306,8 @@ def manifest_analysis(mfxml, man_data_dic, src_type, app_dir):
             if application.getAttribute('android:debuggable') == 'true':
                 ret_list.append(('a_debuggable', (), ()))
                 debuggable = True
+            if application.getAttribute('android:sharedUserId') == 'android.uid.system':
+                ret_list.append(('a_systemuser', (), ()))
             if application.getAttribute('android:allowBackup') == 'true':
                 ret_list.append(('a_allowbackup', (), ()))
             elif application.getAttribute('android:allowBackup') == 'false':
