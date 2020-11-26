@@ -50,6 +50,16 @@ MANIFEST_DESC = {
                         ' debugging helper classes.'),
         'name': 'Debug Enabled For App [android:debuggable=true]',
     },
+    'a_systemuser': {
+        'title' : ('Application uses System user ID'
+                   '<br>[android:sharedUserId=android.uid.system]'),
+        'level': 'high',
+        'description': ('System UID is the second most privileged UID behind root.'
+                        ' Any vulnerability exploited in this application would'
+                        ' be executed with high privileges. It is recommended'
+                        ' to avoid this user whenever possible.'),
+        'name': 'Application uses System user ID [android:sharedUserId=android.uid.system]'),
+    },
     'a_allowbackup': {
         'title': ('Application Data can be Backed up'
                   '<br>[android:allowBackup=true]'),
