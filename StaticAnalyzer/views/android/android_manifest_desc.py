@@ -58,7 +58,7 @@ MANIFEST_DESC = {
                         ' Any vulnerability exploited in this application would'
                         ' be executed with high privileges. It is recommended'
                         ' to avoid this user whenever possible.'),
-        'name': 'Application uses System user ID [android:sharedUserId=android.uid.system]'),
+        'name': 'Application uses System user ID [android:sharedUserId=android.uid.system]',
     },
     'a_allowbackup': {
         'title': ('Application Data can be Backed up'
